@@ -1,6 +1,7 @@
-import './jokegenerator.css'
+
 import axios from "axios"; 
 import { useEffect, useState, useRef } from 'react';
+import { JokeContainer } from './styles';
 
 const USER_DATA_API_URL = "https://api.github.com/users/oZoiko"
 const JOKE_API_URL = "https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart"
@@ -63,9 +64,9 @@ export function JokeGenerator(){
     
     
     return(
-        <section className='container'>
+        <JokeContainer>
             <div className='joke__wrapper'>
-                <div className='user__profile'>
+                <header className='user__profile'>
                     <div className='user__info'>
                         <a href={userData.profile_url}><img src={userData.avatar}></img></a>
                         <span className='user__name'>
@@ -73,8 +74,7 @@ export function JokeGenerator(){
                             <a href={userData.profile_url}>@{userData.name}</a>
                         </span>
                     </div>
-                    
-                </div>
+                </header>
                 <div className='joke__content'>
                     <p>{jokeSetup}</p>
                     <p>{jokeCatch}</p>
@@ -89,7 +89,6 @@ export function JokeGenerator(){
                     New Joke
                 </button>
             </div>
-            
-        </section>
+        </JokeContainer>
     )
 }

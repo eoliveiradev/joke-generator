@@ -1,10 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,5 +18,5 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
