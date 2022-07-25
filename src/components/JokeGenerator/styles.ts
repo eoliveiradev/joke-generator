@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const JokeContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -8,8 +8,7 @@ export const JokeContainer = styled.div`
 
   width: 95vw;
   max-width: 600px;
-  height: 95vh;
-  max-height: 332px;
+  height: 332px;
 
   border: 2px solid ${props => props.theme["border-primary"]};
 
@@ -24,17 +23,17 @@ export const JokeContainer = styled.div`
 
     border-bottom: 2px solid ${props => props.theme["border-primary"]};
   }
+`;
 
-  .user__profile{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  
-    width: 90%;
-    height: 82px;
+export const UserProfile = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    padding-left: 20px;
-  }
+  width: 90%;
+  height: 82px;
+
+  padding-left: 20px;
 
   .user__info{
     display: flex;
@@ -69,61 +68,61 @@ export const JokeContainer = styled.div`
       }
     }
   }
+`;
 
-  .joke__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex: 1;
+export const JokeContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
 
-    p{
-      max-width: 90%;
-      padding-left: 20px;
+  p{
+    max-width: 90%;
+    padding-left: 20px;
 
-      font-size: 1.2rem;
-      font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 400;
 
-      margin: 0;
-      margin-bottom: 12px;
+    margin: 0;
+    margin-bottom: 12px;
 
-      &:first-child{
-        margin-top: 20px;
-      }
+    &:first-child{
+      margin-top: 20px;
     }
   }
+`;
 
-  .button__wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+export const NewJokeButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 
-    width: 100%;
+  width: 100%;
 
-    .new__joke-btn{
-      border: 0;
-      border-radius: 99px;
-      outline: 0;
+  button{
+    border: 0;
+    border-radius: 99px;
+    outline: 0;
 
-      padding: 0.8rem 2rem;
+    padding: 0.8rem 2rem;
 
-      cursor: pointer;
+    cursor: pointer;
 
-      color: ${props => props.theme["text-primary"]};
-      background-color: ${props => props.theme["secondary"]};
-      
-      font-size: 1.5rem;
+    color: ${props => props.theme["text-primary"]};
+    background-color: ${props => props.theme["secondary"]};
+    
+    font-size: 1.5rem;
 
-      transition: 0.2s;
+    transition: 0.2s;
 
-      &:hover{
-        background-color: ${props => props.theme["secondary-hover"]};
-      }
+    &:hover{
+      background-color: ${props => props.theme["secondary-hover"]};
+    }
 
-      &:disabled{
-        cursor: progress;
-        background-color: ${props => props.theme["secondary-opaque"]};
-      }
+    &:disabled{
+      cursor: progress;
+      background-color: ${props => props.theme["secondary-opaque"]};
     }
   }
 
