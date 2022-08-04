@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState, useRef } from 'react';
 import { NewJokeButtonContainer, Container, JokeContent, UserProfile } from './styles';
 
-const USER_DATA_API_URL = "https://api.github.com/users/oZoiko"
+const USER_DATA_API_URL = "https://api.github.com/users/eoliveiradev"
 const JOKE_API_URL = "https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart"
 let alreadyShown: string[] = []
 
